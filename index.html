@@ -84,6 +84,19 @@ p{margin:0}
 .sample a{color:var(--blue);font-weight:700}
 .sample{text-align:center;font-size:13px;color:var(--muted);margin-top:14px}
 
+.svc-band .wrap{padding-block:0 64px}
+.svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.svc{position:relative;background:var(--paper);border:2px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .15s,border-color .15s,box-shadow .15s}
+.svc svg{color:var(--blue)}
+.svc h2{font-size:22px;font-weight:900;line-height:1.15}
+.svc p{color:var(--muted);font-size:16px;flex:1}
+.svc-price{font-size:28px;font-weight:900;letter-spacing:-0.02em;margin-top:4px}
+.svc-link{margin-top:auto;padding-top:6px;font-weight:800;text-decoration:none;color:var(--blue)}
+.svc-link::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.svc:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 10px 28px rgba(10,20,40,.14)}
+.svc:hover .svc-link{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){.svc{transition:none}.svc:hover{transform:none}}
+@media (max-width:820px){.svcs{grid-template-columns:minmax(0,1fr)}.svc-band .wrap{padding-block:0 48px}}
 section{scroll-margin-top:16px}
 .band{padding-block:72px}
 .band.alt{background:var(--paper)}
@@ -231,6 +244,34 @@ footer .wrap{padding-block:24px;font-size:14px;color:var(--muted);display:flex;j
           </div>
         </div>
         <p class="sample">Astro Shantiram, a site I built · <a href="https://astro-shantiram.vercel.app" target="_blank" rel="noopener">see it live</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-band" aria-label="Services">
+    <div class="wrap">
+      <div class="svcs">
+        <article class="svc">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18M8 21h8M12 18v3"></path></svg>
+          <h2>Websites</h2>
+          <p>A mobile-friendly site with online booking, so customers can find you, call you and book.</p>
+          <span class="svc-price">from $500</span>
+          <a class="svc-link" href="#pricing">See what's included →</a>
+        </article>
+        <article class="svc">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+          <h2>Google profile tune-up</h2>
+          <p>Correct hours, photos, services and links, so you look your best on Google Maps.</p>
+          <span class="svc-price">$120</span>
+          <a class="svc-link" href="google-profile.html">See the tune-up →</a>
+        </article>
+        <article class="svc">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M9 8a4 4 0 0 1 0 6M12 6.5a6.5 6.5 0 0 1 0 9"></path></svg>
+          <h2>Tap review cards</h2>
+          <p>Customers tap a card with their phone and your Google review page opens.</p>
+          <span class="svc-price">$30</span>
+          <a class="svc-link" href="review-cards.html">See how it works →</a>
+        </article>
       </div>
     </div>
   </section>
