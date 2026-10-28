@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RiseUp Google Profile Tune-Up</title>
+<meta name="description" content="RiseUp fixes your Google Business Profile so local customers in Dallas–Fort Worth find you, call you and visit. $120 tune-up.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: same bands as the RiseUp home page. Hero pairs the promise with an example map listing; what gets fixed, steps, pricing, FAQ, then a big call/text close. */
+:root{
+  --bg:#FFFFFF; --paper:#F3F5F9; --ink:#111318; --muted:#4A505C; --line:#D9DDE5;
+  --blue:#3866C9; --blue-ink:#FFFFFF; --card:#FFFFFF;
+  --font:"Archivo","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1115; --paper:#171A21; --ink:#F1F3F7; --muted:#A8AFBD; --line:#2A2F3A;
+    --blue:#6E95EC; --blue-ink:#0F1115; --card:#FFFFFF;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1115; --paper:#171A21; --ink:#F1F3F7; --muted:#A8AFBD; --line:#2A2F3A;
+  --blue:#6E95EC; --blue-ink:#0F1115; --card:#FFFFFF;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.55}
+.wrap{max-width:1080px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-0.02em}
+p{margin:0}
+
+.top{border-bottom:2px solid var(--ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;flex-wrap:wrap}
+.logo{font-size:26px;font-weight:900;letter-spacing:-0.03em;text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.nav .back{font-weight:700;font-size:15px;text-decoration:none;color:var(--muted)}
+.nav .back:hover{color:var(--ink)}
+.topcall{font-weight:700;font-size:15px;text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:8px 16px;white-space:nowrap}
+.topcall:hover{background:var(--ink);color:var(--bg)}
+
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:64px 72px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.hero h1{font-size:clamp(44px,7vw,80px);line-height:0.98;font-weight:900;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.lede{font-size:21px;line-height:1.45;color:var(--muted);margin-top:20px;max-width:30em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;font-weight:800;font-size:17px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.num{font-size:15px;color:var(--muted);margin-top:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.num b{color:var(--ink);font-size:17px;letter-spacing:0.01em;user-select:all}
+.copy{font:inherit;font-size:13px;font-weight:700;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 10px;cursor:pointer}
+
+.cardstage{display:flex;justify-content:center}
+.tapcard{position:relative;width:min(320px,100%);aspect-ratio:1;border-radius:20px;overflow:hidden;background:var(--card);border:1.5px solid #D0D5DD;box-shadow:0 18px 40px rgba(10,20,40,.18);transform:rotate(-4deg);color:#222;container-type:inline-size}
+.tapcard .wave{position:absolute;inset:0;width:100%;height:100%}
+.tapcard .stars{position:absolute;left:0;right:0;top:6.5%;text-align:center;font-size:6.8cqi;letter-spacing:4px;color:#E9B83A}
+.tapcard .msg{position:absolute;left:6%;right:6%;top:17%;text-align:center;font-weight:800;color:#FFFFFF;text-transform:uppercase;font-size:6.1cqi;line-height:1.18}
+.tapcard .badge{position:absolute;left:50%;top:38%;width:23%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:#FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13.5cqi;color:#3866C9;line-height:1}
+.tapcard .nfc{position:absolute;left:24%;right:24%;top:65%;height:19.5%;border:2px solid #222;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:9%}
+.tapcard .nfc svg{height:62%;width:auto}
+.tapcard .tap{position:absolute;left:0;right:0;bottom:4.5%;text-align:center;font-weight:700;font-size:5.4cqi;color:#333}
+
+section{scroll-margin-top:16px}
+.band{padding-block:72px}
+.band.alt{background:var(--paper)}
+.band h2{font-size:clamp(32px,4.4vw,46px);line-height:1.05;font-weight:900}
+.band .intro{color:var(--muted);font-size:19px;margin-top:12px;max-width:36em}
+
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:20px;border-top:3px solid var(--ink);display:flex;flex-direction:column;gap:8px;min-width:0}
+.steps li::before{content:counter(s);font-size:15px;font-weight:900;width:34px;height:34px;border-radius:50%;border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center}
+.steps h3{font-size:22px;font-weight:800}
+.steps p{color:var(--muted)}
+
+.offers{margin-top:36px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.offer{background:var(--bg);border:2.5px solid var(--ink);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.offer .label{font-size:14px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+.offer .price{font-size:60px;font-weight:900;line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
+.offer .price small{font-size:20px;font-weight:700;letter-spacing:0;margin-right:4px}
+.offer ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.offer li{display:flex;gap:10px;align-items:flex-start}
+.offer li svg{flex:none;margin-top:4px}
+.offer.feature{border-color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.offer .more{margin-top:auto;font-weight:800;text-decoration:none;color:var(--blue)}
+.offer .more::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.offer{position:relative;transition:transform .15s,box-shadow .15s}
+.offer:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(10,20,40,.14)}
+.offer:hover .more{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){.offer{transition:none}.offer:hover{transform:none}}
+
+.who{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none}
+.who li{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 16px;font-weight:600}
+
+.faq{margin-top:28px;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1.5px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:20px;font-weight:800}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;font-weight:600;line-height:1;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 20px;color:var(--muted);max-width:40em}
+
+.close{background:var(--ink);color:var(--bg)}
+.close .wrap{padding-block:80px;display:flex;flex-direction:column;gap:18px}
+.close h2{font-size:clamp(36px,6vw,64px);font-weight:900;line-height:1}
+.close .big{font-size:clamp(34px,6vw,58px);font-weight:900;letter-spacing:-0.02em;text-decoration:none;color:var(--bg)}
+.close p{color:color-mix(in srgb,var(--bg) 72%,var(--ink));font-size:18px}
+.close .btn.ghost{border-color:var(--bg);color:var(--bg)}
+.close .btn.ghost:hover{background:var(--bg);color:var(--ink)}
+footer .wrap{padding-block:24px;font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:40px 56px;gap:40px}
+  .cardstage{order:-1}
+  .tapcard{width:min(260px,80%)}
+  .steps,.offers{grid-template-columns:minmax(0,1fr)}
+  .band{padding-block:56px}
+}
+
+/* example listing (fixed light colors: it is a picture of a phone screen) */
+.stage{display:flex;flex-direction:column;align-items:center;gap:12px}
+.listing{width:min(340px,100%);background:#FFFFFF;color:#1F2328;border-radius:18px;border:1.5px solid #D0D5DD;box-shadow:0 18px 40px rgba(10,20,40,.18);overflow:hidden;transform:rotate(2deg)}
+.l-map{height:96px;background:repeating-linear-gradient(35deg,#E6ECF2 0 14px,#F2F5F8 14px 28px);position:relative}
+.l-pin{position:absolute;left:50%;top:50%;width:30px;height:30px;transform:translate(-50%,-70%)}
+.l-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px}
+.l-name{font-size:20px;font-weight:900;letter-spacing:-0.01em}
+.l-rate{font-size:14px;color:#555}
+.l-rate b{color:#1F2328}
+.l-rate span{color:#E2A82A;letter-spacing:1px}
+.l-open{font-size:14px}
+.l-open b{color:#1E7A46}
+.l-btns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:8px}
+.l-btns span{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#2A55B0}
+.l-btns i{width:36px;height:36px;border-radius:50%;border:1.5px solid #C9D3E6;display:flex;align-items:center;justify-content:center}
+.l-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:10px}
+.l-photos div{aspect-ratio:1;border-radius:8px;background:linear-gradient(135deg,#C9B79C,#8A6E4B)}
+.l-photos div:nth-child(2){background:linear-gradient(135deg,#9FB4C7,#4E6A86)}
+.l-photos div:nth-child(3){background:linear-gradient(135deg,#B9C9A4,#5E7A45)}
+.caption{font-size:13px;color:var(--muted)}
+
+.fix{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 24px}
+.fix li{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fix svg{width:30px;height:30px;color:var(--blue);margin-bottom:4px}
+.fix h3{font-size:20px;font-weight:800}
+.fix p{color:var(--muted)}
+.steps.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.fix{grid-template-columns:repeat(2,minmax(0,1fr))}.steps.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.fix,.steps.four{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="RiseUp home">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18l6-6 4 4 6-8"></path><path d="M15 8h5v5"></path></svg>
+      RiseUp
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="back" href="./">Websites</a>
+      <a class="back" href="review-cards.html">Review cards</a>
+      <a class="topcall" href="tel:+18177189730">Call or text 817-718-9730</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Google profile tune-up · Dallas–Fort Worth</p>
+        <h1>Look your best on <em>Google Maps.</em></h1>
+        <p class="lede">When people search "near me," your Google profile is the first thing they see. Wrong hours, no photos or a missing website send them to the shop down the street. I fix all of it in one visit.</p>
+        <div class="ctas">
+          <a class="btn primary" href="sms:+18177189730">Text Nishan</a>
+          <a class="btn ghost" href="#pricing">See pricing</a>
+        </div>
+        <p class="num">Call or text: <b id="phone">817-718-9730</b> <button class="copy" id="copyBtn" type="button">Copy</button></p>
+      </div>
+      <div class="stage">
+        <div class="listing" role="img" aria-label="Example of a complete map listing: name, 4.8 star rating, open hours, call, directions, website and booking buttons, and photos">
+          <div class="l-map"><svg class="l-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" fill="#D93B30"></path><circle cx="12" cy="10" r="2.6" fill="#FFFFFF"></circle></svg></div>
+          <div class="l-body">
+            <div class="l-name">Your Business Name</div>
+            <div class="l-rate"><b>4.8</b> <span>★★★★★</span> (186) · Hair salon</div>
+            <div class="l-open"><b>Open</b> · Closes 7 PM</div>
+            <div class="l-btns">
+              <span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></i>Call</span>
+              <span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"></path></svg></i>Directions</span>
+              <span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></i>Website</span>
+              <span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg></i>Book</span>
+            </div>
+            <div class="l-photos"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <p class="caption">Example of a complete profile</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="fix">
+    <div class="wrap">
+      <h2>What I fix</h2>
+      <p class="intro">Most profiles are missing a few things. Each one costs you calls and visits.</p>
+      <ul class="fix">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><h3>Hours that are right</h3><p>Regular hours and holiday hours, so nobody drives over to a closed door.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg><h3>Categories and services</h3><p>The right main category plus your services or menu, so you show up for the right searches.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="9" cy="11" r="2"></circle><path d="M21 16l-5-5-8 8"></path></svg><h3>Photos that sell</h3><p>Your storefront, inside, team and work. I can take them while I'm there.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z"></path></svg><h3>A clear description</h3><p>What you do, where you serve and why people pick you, in plain words.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg><h3>Website and booking links</h3><p>Buttons that send people to your site, your menu or your booking page.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"></path></svg><h3>Your review link</h3><p>A short link to ask customers for reviews. It also works with a <a href="review-cards.html">tap review card</a>.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps four">
+        <li><h3>Add me as a manager</h3><p>You stay the owner. I get access to edit, and you can remove me anytime.</p></li>
+        <li><h3>I tune it up</h3><p>Hours, categories, services, photos, description, links and your review link.</p></li>
+        <li><h3>You check it</h3><p>I walk you through every change on your phone before we're done.</p></li>
+        <li><h3>Keep it fresh</h3><p>Optional: I reply to reviews and post updates for you every month.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band alt" id="pricing">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <div class="offers">
+        <article class="offer feature">
+          <span class="label">Google profile tune-up</span>
+          <span class="price">$120</span>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Everything on this page, done in one visit</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Photos taken at your business if you need them</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Your review link, ready to share</li>
+          </ul>
+          <p style="color:var(--muted);font-size:15px">Monthly care: I reply to reviews, post updates and keep your hours right, from $40/month.</p>
+          <a class="more" href="#contact">Book a tune-up →</a>
+        </article>
+        <article class="offer">
+          <span class="label">Want a website too?</span>
+          <span class="price"><small>from</small>$500</span>
+          <p>A mobile-friendly site with online booking. The Google profile tune-up comes free with every website.</p>
+          <a class="more" href="./">See websites →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="faq">
+    <div class="wrap">
+      <h2>Questions owners ask</h2>
+      <div class="faq">
+        <details><summary>Do I have to give you my Google password?</summary><p>No. You add me as a manager on your profile. I can make changes, you stay the owner, and you can remove me anytime.</p></details>
+        <details><summary>What if I don't have a profile yet?</summary><p>I'll create it with you. Google needs to verify that the business is yours, usually by video, phone or mail, so you'll need to be there for that step.</p></details>
+        <details><summary>Will this put me at the top of Google Maps?</summary><p>Nobody can promise a ranking. A complete, accurate profile with good photos and steady reviews gives you the best chance to show up and get picked.</p></details>
+        <details><summary>How long does it take?</summary><p>Most tune-ups are done in one visit. Some changes take Google a few days to show.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" id="contact">
+    <div class="wrap">
+      <h2>Ready to get found?</h2>
+      <a class="big" href="tel:+18177189730">817-718-9730</a>
+      <p>Call or text Nishan Chaulagain · RiseUp</p>
+      <div class="ctas">
+        <a class="btn primary" href="sms:+18177189730">Text Nishan</a>
+        <a class="btn ghost" href="tel:+18177189730">Call now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 RiseUp · Dallas–Fort Worth, Texas</span>
+    <span>Google is a trademark of Google LLC. RiseUp is not affiliated with Google.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('copyBtn');
+  btn.addEventListener('click', function(){
+    var el = document.getElementById('phone');
+    function selectIt(){ try { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch(e) {} }
+    function done(ok){ btn.textContent = ok ? 'Copied' : 'Select it'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1800); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(el.textContent).then(function(){ done(true); }, function(){ selectIt(); done(false); });
+    } else { selectIt(); done(false); }
+  });
+})();
+</script>
+</body>
+</html>
