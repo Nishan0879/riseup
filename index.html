@@ -41,6 +41,7 @@ p{margin:0}
 .nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .navlink{font-weight:700;font-size:15px;text-decoration:none;color:var(--muted)}
 .navlink:hover{color:var(--ink)}
+.nav [aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
 .topcall{font-weight:700;font-size:15px;text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:8px 16px;white-space:nowrap}
 .topcall:hover{background:var(--ink);color:var(--bg)}
 
@@ -188,6 +189,7 @@ footer .wrap{padding-block:24px;font-size:14px;color:var(--muted);display:flex;j
       RiseUp DFW
     </a>
     <nav class="nav" aria-label="Main">
+      <a class="navlink" href="./" aria-current="page">Websites</a>
       <a class="navlink" href="google-profile.html">Google profile</a>
       <a class="navlink" href="review-cards.html">Review cards</a>
       <a class="topcall" href="tel:+18177189730">Call or text 817-718-9730</a>
