@@ -112,7 +112,11 @@ section{scroll-margin-top:16px}
 .checks svg{flex:none;margin-top:4px}
 .note{font-size:15px;color:var(--muted)}
 .more{margin-top:auto;font-weight:800;text-decoration:none;color:var(--blue)}
-.more:hover{text-decoration:underline}
+.more::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.plan,.addon{position:relative;transition:transform .15s,box-shadow .15s}
+.plan:hover,.addon:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(10,20,40,.14)}
+.plan:hover .more,.addon:hover .more{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){.plan,.addon{transition:none}.plan:hover,.addon:hover{transform:none}}
 
 .work{margin-top:32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;border:2.5px solid var(--ink);border-radius:20px;padding:32px}
 .wtext{display:flex;flex-direction:column;gap:12px;align-items:flex-start;min-width:0}
@@ -292,6 +296,7 @@ footer .wrap{padding-block:24px;font-size:14px;color:var(--muted);display:flex;j
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Changes until you're happy with it</li>
           </ul>
           <p class="note">Bigger sites with more pages or online booking are priced after we talk.</p>
+          <a class="more" href="#how">See how it works →</a>
         </article>
         <article class="addon">
           <span class="label">Add-on: tap review card</span>

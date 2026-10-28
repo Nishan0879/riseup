@@ -92,7 +92,11 @@ section{scroll-margin-top:16px}
 .offer li svg{flex:none;margin-top:4px}
 .offer.feature{border-color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
 .offer .more{margin-top:auto;font-weight:800;text-decoration:none;color:var(--blue)}
-.offer .more:hover{text-decoration:underline}
+.offer .more::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.offer{position:relative;transition:transform .15s,box-shadow .15s}
+.offer:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(10,20,40,.14)}
+.offer:hover .more{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){.offer{transition:none}.offer:hover{transform:none}}
 
 .who{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none}
 .who li{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 16px;font-weight:600}
@@ -190,12 +194,13 @@ footer .wrap{padding-block:24px;font-size:14px;color:var(--muted);display:flex;j
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Delivered and tested in person</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>One-time cost, no monthly fee</li>
           </ul>
+          <a class="more" href="#how">See how it works →</a>
         </article>
         <article class="offer">
           <span class="label">Need a website too?</span>
           <span class="price"><small>from</small>$500</span>
           <p>A mobile-friendly site with your services, hours, photos and one-tap buttons to call, text or get directions.</p>
-          <a class="more" href="./#pricing">See websites →</a>
+          <a class="more" href="./">See websites →</a>
         </article>
       </div>
       <ul class="who" aria-label="Businesses RiseUp works with">
